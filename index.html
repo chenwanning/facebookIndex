@@ -7,6 +7,8 @@
     <style type="text/css">
     body{margin:0px;}
 
+
+    /*上方的版*/
     header{ /*在主板frame外，再包一層header(html5語意標籤)，用來設定向畫面左右擴張填滿螢幕的顏色 */
         background-color:#3B5897;
 
@@ -14,7 +16,7 @@
 
    
     
-    .frame{          /*主板框架*/
+    .headerFrame{          /*主板框架*/
       width:1000px;
       margin-left: auto;
       margin-right: auto;   
@@ -103,64 +105,103 @@ width: 42px;
     font-size: 13px;
     padding-top: 3px;
     color:lightgray;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
+    opacity: 0.7;
 
 }
 
+
+/* 中間的版*/
  main{ 
-      background: linear-gradient(white,#D4D9E9 );
+      background: linear-gradient(white,#D4D9E9 ); /*背景設定為漸層*/
       text-align:left;
     }
-#main{
-width:1000px;
- margin-left: auto;
-      margin-right: auto;
+
+#mainFrame{
+    width:1000px;
+    margin-left: auto;
+    margin-right: auto;
     }
-.main{ padding:10px;
 
 
-        display:inline-block;vertical-align: top;}
 .mainLeft{
-color:#0E385F;
-font-weight: bold;
-font-size: 21px;
-width:560px;
-padding-top: 35px;
+    display:inline-block;vertical-align: top;
+    padding-left: 10px;
+    border:1px solid black;
+    color:#0E385F;
+    font-weight: bold;
+    font-size: 21px;
+    width:540px; /*550px-padding-left(10px)*/
+    padding-top: 35px;
+    }
+
+#mainLeftImg{
+    width:100%;
 }
 
 .mainRight{
-    width:400px;
-   padding-top: 20px;
-}
-
-
-.input2 input{
-
     display:inline-block;vertical-align: top;
- padding:10px;
- margin-top:12px; 
-
-
-
-}
-.inputP{
-    width:380px;
+    border:1px solid purple;
+    padding-left: 35px;
+    width:411px; /*450-35-*/
+    padding-top: 20px;
 }
 
-
-
-
-.inputN{
-    width:172px;
-}
-
-img{
-    width:480px;
-}
-.title{
-    font-size: 35px;
+.title{ /*註冊兩個字*/
+    padding-top: 2px;
+    font-size: 37px;
     font-weight: bold;
 }
+
+#mainInputFrame{ /*姓氏與名字的輸入框 框架 */
+     margin-top:18px; 
+    width:411px;
+}
+
+#mainInputLastName{ /*姓氏的輸入框 框架 */ 
+ display:inline-block;vertical-align: top;
+ width:200px;
+}
+
+#mainInputFirstName{ /*名字的輸入框 框架 */
+ display:inline-block;vertical-align: top;
+ width:200px;
+}
+
+#mainInputLastName>input{ /*姓氏的輸入框 樣式 */  
+    height: 37px;
+    width: 192px;
+    border-radius: 5px;
+    border: 1px solid #B9C2D3;
+}
+
+
+#mainInputFirstName>input{ /*名字的輸入框 樣式 */
+    height: 37px;
+    width: 192px;
+    border-radius: 5px;
+    border: 1px solid #B9C2D3;
+}
+
+
+input::placeholder{ /*輸入框 文字樣式*/
+font-size: 18px; 
+color:rgb(153, 153, 153);
+padding-left: 10px;
+}
+
+.mainInput>input{  /*手機號碼或電子郵件與設定密碼的輸入框 樣式 */
+margin-top:12px;  
+width:392px;
+height:37px;
+border-radius: 5px;
+border: 1px solid #B9C2D3;
+}
+
+
+
+
+
 .content{
     padding-top:10px;
 font-size:20px;
@@ -192,10 +233,7 @@ select{
     height: 30px;
 }
 
-input[placeholder]{
-font-size: 16px; 
-   
-}
+
 
 
 
@@ -290,11 +328,11 @@ margin-right: auto;
 
 
 <body>
+<!--上方的版-->
 <header>
-<div class="frame">  
+<div class="headerFrame">  
 <div class="fbLogo">
-facebook
-   
+facebook  
     </div><!--
 --><div class="fbTopInput">
 <div class="fbTopInputInner" id="EmallOrFoneNumber"><div>電子郵件或電話</div><input type="text"></div><!--
@@ -304,27 +342,26 @@ facebook
 
 
 
-
-
-
-
-
+<!--中間的版-->
  <main>
-  <div id="main">
-<div class="main mainLeft">
+  <div id="mainFrame">
+<div class="mainLeft">
 Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每一刻。
-<img src="https://www.facebook.com/rsrc.php/v3/yx/r/pyNVUg5EM0j.png" alt="">
+<img id="mainLeftImg" src="https://www.facebook.com/rsrc.php/v3/yx/r/pyNVUg5EM0j.png" alt="">
     
     </div><!--
---><div class="main mainRight">
+--><div class="mainRight">
     <div class="title">註冊</div>
     <div class="content">永遠免費!</div>
 
 
 
-<div class="input2"> <input class="inputN" type="text" placeholder="姓氏">&nbsp;&nbsp;<input class="inputN" type="text"  placeholder="名字"></div>
- <div class="input2"><input  class="inputP"  type="text" placeholder="手機號碼或電子郵件"></div>
-  <div class="input2"><input  type="text" class="inputP"  placeholder="設定密碼"></div>
+<div id="mainInputFrame">
+<div id="mainInputLastName"><input type="text" placeholder="姓氏"></div><!--
+--><div id="mainInputFirstName"><input type="text" placeholder="名字"></div>
+</div>
+ <div class="mainInput"><input  type="text" placeholder="手機號碼或電子郵件"></div>
+<div class="mainInput"><input type="text" placeholder="設定密碼"></div>
  
  
  
