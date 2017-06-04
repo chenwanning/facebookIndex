@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style type="text/css">
+    body{margin:0px;}
+
+    header{ /*在主板frame外，再包一層header(html5語意標籤)，用來設定向畫面左右擴張填滿螢幕的顏色 */
+        background-color:#3B5897;
+
+    }
+
+   
+    
+    .frame{          /*主板框架*/
+      width:1000px;
+      margin-left: auto;
+      margin-right: auto;   
+      background-color:#3B5897;
+      text-align:left;
+      color:white; 
+    }
+
+
+    .fbLogo{ /*畫面左上方 facebook的標誌*/
+        display:inline-block;vertical-align: top;
+        width:490px; /*500px-10px(padding-left)*/
+        font-family: serif;
+        font-weight:bold; 
+        font-size: 40px;
+        padding-bottom: 10px;
+        padding-top: 25px;
+        padding-left: 10px;
+    
+    }
+
+
+    .fbTopInput{ /*畫面右上半 板子寬度設為主板(frame)1000px/2*/
+      display:inline-block;vertical-align: top;  
+      width:500px;
+      padding-top: 10px;
+    }
+
+.fbTopInputInner{  
+display:inline-block;vertical-align: top;
+color: white;
+font-size: 13px;
+height: auto;
+line-height: 20px;
+text-align: left;
+
+ 
+}
+
+
+.fbTopInputInner input{    /*右上方，電子郵件或電話、密碼輸入框的寬高*/
+    width:147px;
+    height: 20px;
+   border: #1D2A5B 1px solid;
+}
+
+.fbTopInputInner div{    /*右上方，電子郵件或電話、密碼等文字與輸入框的距離*/
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+#EmallOrFoneNumber{
+width:165px;
+padding-left: 123px;
+
+}
+
+#passWord{
+width:150px;
+
+}
+
+#signIn{ 
+padding-top: 3px;
+width:53px;
+text-align: right; 
+
+
+}
+
+#signIn button{ /*登入按鈕*/
+
+color:white;
+background-color:#4267B2;
+border: #1D2A5B 1px solid;
+height: 25px;
+width: 42px;
+
+}
+
+
+#forget{/*忘記密碼 樣式設定:與輸入框取距離 字型大小與顏色*/
+    font-size: 13px;
+    margin-top: 2px;
+    color:lightgray;
+}
+
+ main{ 
+      background: linear-gradient(white,#D4D9E9 );
+      text-align:left;
+    }
+#main{
+width:1000px;
+ margin-left: auto;
+      margin-right: auto;
+    }
+.main{ padding:10px;
+
+
+        display:inline-block;vertical-align: top;}
+.mainLeft{
+color:#0E385F;
+font-weight: bold;
+font-size: 21px;
+width:560px;
+padding-top: 35px;
+}
+
+.mainRight{
+    width:400px;
+   padding-top: 20px;
+}
+
+
+.input2 input{
+
+    display:inline-block;vertical-align: top;
+ padding:10px;
+ margin-top:12px; 
+
+
+
+}
+.inputP{
+    width:380px;
+}
+
+
+
+
+.inputN{
+    width:172px;
+}
+
+img{
+    width:480px;
+}
+.title{
+    font-size: 35px;
+    font-weight: bold;
+}
+.content{
+    padding-top:10px;
+font-size:20px;
+}
+
+.birthday{
+    padding-top:15px;
+   
+}
+
+.content-left{  display:inline-block;vertical-align: top;}
+.content-right{  display:inline-block;vertical-align: top;
+font-size: 5px;
+color:#3B5897;
+}
+
+
+Radio{
+     margin-top: 8px ; 
+    display:inline-block;vertical-align: top;
+    font-size:18px;
+}
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+}
+select{
+    width:60px;
+    height: 30px;
+}
+
+input[placeholder]{
+font-size: 16px; 
+   
+}
+
+
+
+
+#day{
+    width: 40px;
+}
+
+
+
+
+
+.text{font-size: 12px;}
+#text{
+    padding-top:10px; 
+    color: grey;
+    font-size: 12px;
+}
+span{
+    color:#3B5897;
+}
+
+#creatId{
+background-color: #5A9248;
+color:aliceblue;
+font-size: 20px;
+height:45px;
+width:220px;
+margin-top:20px; 
+border-radius: 10px;
+}
+#creatId:hover{
+opacity:0.9;
+
+
+}
+
+.text2{
+    color: gray;
+    font-size: 15px;
+    padding-top: 22px;
+    padding-bottom:22px;
+}
+
+#language{
+    width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color:#3B5897;
+    text-align: left;
+}
+
+#language span{
+    color:gray;
+} 
+.link{
+width: 1000px;
+margin-left:auto;
+    margin-right: auto; 
+       font-size: 14px;   
+    color:#3660B7;
+    text-align: left;
+}
+.linkDiv{
+    width:90px;
+    display:inline-block;vertical-align: top;
+ 
+   
+}
+
+footer{
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<header>
+<div class="frame">  
+<div class="fbLogo">
+facebook
+   
+    </div><!--
+--><div class="fbTopInput">
+<div class="fbTopInputInner" id="EmallOrFoneNumber"><div>電子郵件或電話</div><input type="text"></div><!--
+--><div class="fbTopInputInner" id="passWord"><div>密碼</div><input type="text"><div id="forget">忘記帳號?</div></div><!--
+--><div class="fbTopInputInner" id="signIn"><br><button>登入</button></div></div></div>
+</header>
+
+
+
+
+
+
+
+
+ <main>
+  <div id="main">
+<div class="main mainLeft">
+Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每一刻。
+<img src="https://www.facebook.com/rsrc.php/v3/yx/r/pyNVUg5EM0j.png" alt="">
+    
+    </div><!--
+--><div class="main mainRight">
+    <div class="title">註冊</div>
+    <div class="content">永遠免費!</div>
+
+
+
+<div class="input2"> <input class="inputN" type="text" placeholder="姓氏">&nbsp;&nbsp;<input class="inputN" type="text"  placeholder="名字"></div>
+ <div class="input2"><input  class="inputP"  type="text" placeholder="手機號碼或電子郵件"></div>
+  <div class="input2"><input  type="text" class="inputP"  placeholder="設定密碼"></div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <div class="content birthday">生日<br>
+  <div class="content-left"><select name="年">
+      <option value="">年</option>
+　<option value="1990">1990</option>
+　<option value="1991">1991</option>
+　<option value="1992">1992</option>
+　<option value="1993">1993</option>
+　
+</select><select name="月" id="">
+       <option value="">月</option>
+<option value="">1</option>
+<option value="">2</option>
+<option value="">3</option>
+<option value="">4</option>
+<option value="">5</option>
+
+   </select><select id="day" name="日" id=""> 
+    <option value="">日</option>
+     <option value="">1</option>
+     <option value="">2</option>
+     <option value="">3</option>
+     <option value="">4</option>
+     <option value="">5</option>
+      <option value="">6</option>
+     <option value="">7</option>
+     <option value="">8</option>
+     <option value="">9</option>
+     <option value="">10</option>
+     </select>
+    
+     </div>
+  <div class="content-right">為什麼需要提供出生日期的<br>資料?</div></div>
+
+ <div><Radio><input  type="radio" name="gender" value="female">女性</Radio><!--
+-->&nbsp;&nbsp;&nbsp;<Radio><input  type="radio"  name="gender" value="male" checked>男性</Radio></div> 
+<div id='text'>一旦點擊建立帳號，就代表你同意<span>條款</span>，也確認你已閱讀<span>資<br>料政策</span>，包括 <span>Cookie 的使用</span>。你會收到 Facebook 的簡訊通<br>知，而且可以隨時選擇退出。</div>
+<button id="creatId">建立帳號</button>
+<div class="text2">為名人、團體或公司企業建立<span>粉絲專頁</span></div>
+  
+
+</div>
+
+   </div>
+ </main>
+ </div>
+<footer>
+<div id="language"><span>中文(台灣)</span> &nbsp;English(US) &nbsp;Tiếng  &nbsp;ViệtBahasa &nbsp;Indonesia &nbsp;ภาษาไทย &nbsp;日本語 &nbsp;Español &nbsp;Português (Brasil)&nbsp;Français (France)&nbsp;Deutsch&nbsp;Italiano</div>
+<hr>
+<div class="link">
+<div class="linkDiv">註冊<br>名人<br>隱私政策</div><!--
+--><div class="linkDiv">登入<br>市集<br>cookie <br></div>
+<div class="linkDiv">Messenger<br>社團<br>Ad Choices</div>
+<div class="linkDiv">Facebook Lite<br></div>
+<div class="linkDiv"></div>
+<div class="linkDiv"></div>
+<div class="linkDiv"></div>
+<div class="linkDiv"></div>
+<div class="linkDiv"></div>
+<div class="linkDiv"></div></div>
+</footer>
+
+
+
+</body>
+</html>
