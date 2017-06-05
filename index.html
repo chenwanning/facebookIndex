@@ -127,12 +127,13 @@ width: 42px;
 .mainLeft{
     display:inline-block;vertical-align: top;
     padding-left: 10px;
-    border:1px solid black;
     color:#0E385F;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 21.5px;
     width:540px; /*550px-padding-left(10px)*/
-    padding-top: 35px;
+    padding-top: 40px;
+    line-height:30px;
+    letter-spacing: 0px;
     }
 
 #mainLeftImg{
@@ -141,9 +142,8 @@ width: 42px;
 
 .mainRight{
     display:inline-block;vertical-align: top;
-    border:1px solid purple;
-    padding-left: 35px;
-    width:411px; /*450-35-*/
+    padding-left: 38px;
+    width:412px; /*450px-38px(padding-left)*/
     padding-top: 20px;
 }
 
@@ -151,6 +151,12 @@ width: 42px;
     padding-top: 2px;
     font-size: 37px;
     font-weight: bold;
+}
+
+
+#freeForever{/*永遠免費!樣式*/
+padding-top:10px;
+font-size:20px;
 }
 
 #mainInputFrame{ /*姓氏與名字的輸入框 框架 */
@@ -191,7 +197,7 @@ padding-left: 10px;
 }
 
 .mainInput>input{  /*手機號碼或電子郵件與設定密碼的輸入框 樣式 */
-margin-top:12px;  
+margin-top:10px;  
 width:392px;
 height:37px;
 border-radius: 5px;
@@ -199,130 +205,130 @@ border: 1px solid #B9C2D3;
 }
 
 
-
-
-
-.content{
-    padding-top:10px;
-font-size:20px;
+#birthday{ /*生日樣式*/
+    padding-top:20px;
+    padding-bottom: 4px;
+    font-size: 19px;
+  
 }
 
-.birthday{
-    padding-top:15px;
-   
-}
 
-.content-left{  display:inline-block;vertical-align: top;}
-.content-right{  display:inline-block;vertical-align: top;
+#birthdayLeft{  display:inline-block;vertical-align: top;}/*生日選單樣式*/
+
+#birthdayRight{  display:inline-block;vertical-align: top;/*為什麼需要提供出生日期的資料 樣式*/
+margin-left: 5px;
 font-size: 5px;
 color:#3B5897;
 }
 
+select{/*生日的選單 */
+    :1px solid rgb(153, 153, 153);
+    color:black;
+    width:68px;
+    height: 30px;
+    padding-left: 5px;
+}
 
-Radio{
-     margin-top: 8px ; 
+#day{ /* 生日的日選單 寬度較窄*/
+    width: 48px;
+}
+
+
+.genderRadio{/*女性 男性radio樣式*/
+    margin-top: 20px ; 
     display:inline-block;vertical-align: top;
     font-size:18px;
-}
-input[type="radio"]{
-    width: 20px;
-    height: 20px;
-}
-select{
-    width:60px;
-    height: 30px;
+    margin-left: 5px;
 }
 
+#maleRadio{/*男性radio與女性radio取距離*/
+    margin-left: 18px;
+}
 
-
-
-
-
-#day{
-    width: 40px;
+input[type="radio"]{ /*調整radio圓圈大小*/
+    width: 13px;
+    height: 13px;
 }
 
 
-
-
-
-.text{font-size: 12px;}
-#text{
-    padding-top:10px; 
+#text{/*一旦點擊建立帳號..那段字 樣式*/
+    padding-top:15px; 
     color: grey;
     font-size: 12px;
+    line-height: 17px;/*行高*/
+    letter-spacing:0px;/*字距*/
 }
+
 span{
     color:#3B5897;
 }
 
-#creatId{
-background-color: #5A9248;
+#creatId{ /*建立帳號鈕的樣式*/
+background:linear-gradient(#32a350,#588944 );
 color:aliceblue;
 font-size: 20px;
-height:45px;
-width:220px;
+height:40px;
+width:190px;
 margin-top:20px; 
-border-radius: 10px;
+border-radius: 5px;
+border:1px solid #3b6e22;
+font-weight: bold;
 }
+
+
 #creatId:hover{
 opacity:0.9;
 
-
 }
 
-.text2{
-    color: gray;
-    font-size: 15px;
-    padding-top: 22px;
-    padding-bottom:22px;
+.creatFans{/*為名人、團體或公司企業建立粉絲專頁 樣式*/
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom:30px;
 }
 
-#language{
+ #footerFrame{          /*底板框架*/
+      width:1000px;
+      margin-left: auto;
+      margin-right: auto; 
+ }
+
+#footerLanguage{
     width:1000px;
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
     color:#3B5897;
     text-align: left;
+    margin-top: 10px;
+    margin-bottom:10px;
 }
 
-#language span{
-    color:gray;
-} 
-.link{
-width: 1000px;
-margin-left:auto;
-    margin-right: auto; 
-       font-size: 14px;   
-    color:#3660B7;
-    text-align: left;
-}
-.linkDiv{
-    width:90px;
-    display:inline-block;vertical-align: top;
- 
-   
+#footerLanguage>span{/*中文(台灣) English(US)等相鄰距離*/
+    margin-left:8px; 
+}   
+
+#spanChinese{
+    margin-left:0px; /*想要靠左 為什麼無作用呢?*/
+    color:lightslategray;
 }
 
-footer{
-width: 1000px;
-margin-left: auto;
-margin-right: auto;
+hr{
+    border: 0.1px solid #dddfe2;/*如何再設的細一點呢?*/
+     
 }
+
+.footerDiv{/*第二排 html尚未寫*/
+display:inline-block;vertical-align: top;
+width:
+}
+
+
+
     </style>
 </head>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -352,7 +358,7 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
     </div><!--
 --><div class="mainRight">
     <div class="title">註冊</div>
-    <div class="content">永遠免費!</div>
+    <div id="freeForever">永遠免費!</div>
 
 
 
@@ -369,8 +375,9 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
  
  
  
-  <div class="content birthday">生日<br>
-  <div class="content-left"><select name="年">
+  <div id="birthday">生日</div>
+  <div>
+  <div id="birthdayLeft"><select name="年">
       <option value="">年</option>
 　<option value="1990">1990</option>
 　<option value="1991">1991</option>
@@ -400,13 +407,13 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
      </select>
     
      </div>
-  <div class="content-right">為什麼需要提供出生日期的<br>資料?</div></div>
+  <div id="birthdayRight">為什麼需要提供出生日期的<br>資料?</div></div>
 
- <div><Radio><input  type="radio" name="gender" value="female">女性</Radio><!--
--->&nbsp;&nbsp;&nbsp;<Radio><input  type="radio"  name="gender" value="male" checked>男性</Radio></div> 
+ <div class="genderRadio "><input  type="radio" name="gender" value="female">女性</div><!--
+--><div class="genderRadio" id="maleRadio"><input  type="radio"  name="gender" value="male" checked>男性</div> 
 <div id='text'>一旦點擊建立帳號，就代表你同意<span>條款</span>，也確認你已閱讀<span>資<br>料政策</span>，包括 <span>Cookie 的使用</span>。你會收到 Facebook 的簡訊通<br>知，而且可以隨時選擇退出。</div>
 <button id="creatId">建立帳號</button>
-<div class="text2">為名人、團體或公司企業建立<span>粉絲專頁</span></div>
+<div class="creatFans">為名人、團體或公司企業<span>建立粉絲專頁</span></div>
   
 
 </div>
@@ -415,19 +422,35 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
  </main>
  </div>
 <footer>
-<div id="language"><span>中文(台灣)</span> &nbsp;English(US) &nbsp;Tiếng  &nbsp;ViệtBahasa &nbsp;Indonesia &nbsp;ภาษาไทย &nbsp;日本語 &nbsp;Español &nbsp;Português (Brasil)&nbsp;Français (France)&nbsp;Deutsch&nbsp;Italiano</div>
-<hr>
-<div class="link">
-<div class="linkDiv">註冊<br>名人<br>隱私政策</div><!--
---><div class="linkDiv">登入<br>市集<br>cookie <br></div>
-<div class="linkDiv">Messenger<br>社團<br>Ad Choices</div>
-<div class="linkDiv">Facebook Lite<br></div>
-<div class="linkDiv"></div>
-<div class="linkDiv"></div>
-<div class="linkDiv"></div>
-<div class="linkDiv"></div>
-<div class="linkDiv"></div>
-<div class="linkDiv"></div></div>
+<div id="footerFrame">
+<div id="footerLanguage">
+<span id="spanChinese">中文(台灣)</span>
+<span>English(US)</span>
+<span> Tiếng Việt</span>
+<span>Bahasa Indonesia</span>
+<span>ภาษาไทย</span>
+<span>日本語</span>
+<span>Español</span>
+<span>Português (Brasil)</span>
+<span>Français (France)</span>
+<span>Deutsch</span>
+<span>Italiano</span>
+ </div>
+ <hr>
+ </div>
+
+
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+</div>
+
 </footer>
 
 
