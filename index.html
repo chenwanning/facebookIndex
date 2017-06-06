@@ -29,12 +29,12 @@
     .fbLogo{ /*畫面左上方 facebook的標誌*/
         display:inline-block;vertical-align: top;
         width:490px; /*500px-10px(padding-left)*/
-        font-family: serif;
         font-weight:bold; 
         font-size: 40px;
         padding-bottom: 10px;
         padding-top: 25px;
         padding-left: 10px;
+        font-family:sans-serif;
     
     }
 
@@ -129,11 +129,12 @@ width: 42px;
     padding-left: 10px;
     color:#0E385F;
     font-weight: bold;
-    font-size: 21.5px;
+    font-size: 21px;
     width:540px; /*550px-padding-left(10px)*/
     padding-top: 40px;
     line-height:30px;
     letter-spacing: 0px;
+    font-family: sans-serif;
     }
 
 #mainLeftImg{
@@ -148,15 +149,22 @@ width: 42px;
 }
 
 .title{ /*註冊兩個字*/
-    padding-top: 2px;
+    padding-top: 4px;
     font-size: 37px;
     font-weight: bold;
 }
 
 
 #freeForever{/*永遠免費!樣式*/
-padding-top:10px;
-font-size:20px;
+padding-top:7px;
+font-size:19.5px;
+letter-spacing: 1px;
+}
+
+#freeForever>div{
+display: inline-block;
+font-size: 22px;
+font-weight: 900;
 }
 
 #mainInputFrame{ /*姓氏與名字的輸入框 框架 */
@@ -191,7 +199,7 @@ font-size:20px;
 
 
 input::placeholder{ /*輸入框 文字樣式*/
-font-size: 18px; 
+font-size: 19px; 
 color:rgb(153, 153, 153);
 padding-left: 10px;
 }
@@ -222,7 +230,7 @@ color:#3B5897;
 }
 
 select{/*生日的選單 */
-    :1px solid rgb(153, 153, 153);
+    border:1px solid #B9C2D3;
     color:black;
     width:68px;
     height: 30px;
@@ -290,41 +298,98 @@ opacity:0.9;
 }
 
  #footerFrame{          /*底板框架*/
-      width:1000px;
+      width:977px;
       margin-left: auto;
       margin-right: auto; 
  }
 
 #footerLanguage{
-    width:1000px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 14px;
+    font-size: 13px;
     color:#3B5897;
     text-align: left;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom:10px;
+    font-family: sans-serif;
 }
 
 #footerLanguage>span{/*中文(台灣) English(US)等相鄰距離*/
-    margin-left:8px; 
+    margin-left:6px; 
 }   
 
-#spanChinese{
-    margin-left:0px; /*想要靠左 為什麼無作用呢?*/
-    color:lightslategray;
+#footerLanguage>span:nth-child(1){/*中文(台灣) 靠左 */
+color:lightslategray;
+margin-left:0px; 
 }
 
-hr{
-    border: 0.1px solid #dddfe2;/*如何再設的細一點呢?*/
-     
-}
 
-.footerDiv{/*第二排 html尚未寫*/
+#hr{/*footer的水平分隔線*/
+    width:100%;
+    height: 1px;
+    background-color:#DDDFE2;
+}    
+
+#footerDiv>div{/*footer第二排*/
+margin-top: 7px;
 display:inline-block;vertical-align: top;
-width:
+font-size: 13px;
+color:#365899;
+margin-bottom:20px;
+font-family: sans-serif;
 }
 
+#footerDiv>div>div{
+margin-top: 3px;
+
+}
+
+#footerDiv>div:nth-child(1){
+   width:70px;
+}
+
+#footerDiv>div:nth-child(2){
+   width:60px;
+}
+
+#footerDiv>div:nth-child(3){
+   width:102px;
+}
+
+#footerDiv>div:nth-child(4){
+   width:102px;
+}
+
+#footerDiv>div:nth-child(5){
+   width:75px;
+}
+
+#footerDiv>div:nth-child(6){
+   width:76px;
+}
+
+#footerDiv>div:nth-child(7){
+   width:46px;
+}
+
+#footerDiv>div:nth-child(8){
+   width:74px;
+}
+
+#footerDiv>div:nth-child(9){
+   width:97px;
+}
+
+#footerDiv>div:nth-child(10){
+   width:75px;
+}
+
+#facebook2017{
+    font-family: sans-serif;
+    color:#737373;
+    font-size:12px;
+    padding-bottom: 20px;
+}
 
 
     </style>
@@ -358,7 +423,7 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
     </div><!--
 --><div class="mainRight">
     <div class="title">註冊</div>
-    <div id="freeForever">永遠免費!</div>
+    <div id="freeForever">永遠免費 <div>!</div></div>
 
 
 
@@ -424,8 +489,8 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
 <footer>
 <div id="footerFrame">
 <div id="footerLanguage">
-<span id="spanChinese">中文(台灣)</span>
-<span>English(US)</span>
+<span>中文(台灣)</span>
+<span>English (US)</span>
 <span> Tiếng Việt</span>
 <span>Bahasa Indonesia</span>
 <span>ภาษาไทย</span>
@@ -436,8 +501,62 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
 <span>Deutsch</span>
 <span>Italiano</span>
  </div>
- <hr>
+ <div id="hr"></div>
+<div id="footerDiv">
+<div>
+<div>註冊</div>
+<div>名人</div>
+<div>隱私政策</div>
+</div><!--
+--><div>
+<div>登入</div>
+<div>市集</div>
+<div>Cookie</div>    
+</div><!--
+--><div>
+<div>Messenger</div>
+<div>社團</div>
+<div>Ad Choices</div>    
+</div><!--
+--><div>
+<div>Faceboo Lite</div>
+<div>食譜</div>
+<div>使用條款</div>
+</div><!--
+--><div>
+<div>行動版</div>
+<div>Moments</div>
+<div>使用說明</div>    
+</div><!--
+--><div>
+<div>尋找朋友</div>
+<div>Instagram</div>
+</div><!--
+--><div>
+<div>用戶</div>
+<div>關於</div>
+</div><!--
+--><div>
+<div>粉絲專頁</div>
+<div>刊登廣告</div>       
+</div><!--
+--><div>
+<div>地標</div>
+<div>建立粉絲專頁</div>    
+</div><!--
+--><div>
+<div>遊戲</div>
+<div>開發人員</div>
+</div><!--
+--><div>
+<div>地點</div>
+<div>工作機會</div>
+</div>
+
+</div>
+<div id="facebook2017">Facebook © 2017</div>
  </div>
+
 
 
 </footer>
