@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>css</title>
+    <title>fbIndex</title>    
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">  <!--GOOGLE FONTS-->
     <style type="text/css">
     body{margin:0px;}
 
@@ -14,29 +15,28 @@
 
     }
 
-   
     
     .headerFrame{          /*主板框架*/
       width:1000px;
       margin-left: auto;
       margin-right: auto;   
-      background-color:#3B5897;
+      background-color:#3B5998;
       text-align:left;
       color:white; 
     }
 
 
-    .fbLogo{ /*畫面左上方 facebook的標誌*/
+  .fbLogo{ /*畫面左上方 facebook的標誌*/
         display:inline-block;vertical-align: top;
         width:490px; /*500px-10px(padding-left)*/
-        font-weight:bold; 
-        font-size: 40px;
-        padding-bottom: 10px;
-        padding-top: 25px;
+        font-weight: 900; 
+        font-size: 36px;
+        padding-top: 23px;
         padding-left: 10px;
-        font-family:sans-serif;
-    
+        padding-bottom: 2px;
+        font-family:Poppins;  
     }
+    
 
 
     .fbTopInput{ /*畫面右上半 板子寬度設為主板(frame)1000px/2*/
@@ -78,16 +78,12 @@ padding-left: 123px;
 width:150px;
 
 
-
-
 }
 
 #signIn{ 
 padding-top: 12px;
 width:53px;
 text-align: right; 
-
-
 }
 
 #signIn button{ /*登入按鈕*/
@@ -96,12 +92,12 @@ color:white;
 background-color:#4267B2;
 border: #1D2A5B 1px solid;
 height: 25px;
-width: 42px;
+width: 43px;
 
 }
 
 
-#forget{/*忘記密碼 樣式設定:與輸入框取距離 字型大小與顏色*/
+#forget{/*忘記帳號 樣式設定:與輸入框取距離 字型大小與顏色*/
     font-size: 13px;
     padding-top: 3px;
     color:lightgray;
@@ -212,6 +208,11 @@ border-radius: 5px;
 border: 1px solid #B9C2D3;
 }
 
+::placeholder{/*placeholder的字往下一點*/
+    position: relative;
+    top:3px;
+}
+
 
 #birthday{ /*生日樣式*/
     padding-top:20px;
@@ -309,18 +310,25 @@ opacity:0.9;
     font-size: 13px;
     color:#3B5897;
     text-align: left;
-    margin-top: 8px;
     margin-bottom:10px;
     font-family: sans-serif;
 }
 
 #footerLanguage>span{/*中文(台灣) English(US)等相鄰距離*/
     margin-left:6px; 
+   
 }   
 
-#footerLanguage>span:nth-child(1){/*中文(台灣) 靠左 */
+#footerLanguage>span:hover{/*游標移到上面會出現底線及手指*/
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+
+#footerLanguage>span:nth-child(1){/*中文(台灣) 靠左、游標移到上面不會出現底線*/
 color:lightslategray;
 margin-left:0px; 
+ text-decoration:none;
 }
 
 
@@ -341,8 +349,13 @@ font-family: sans-serif;
 
 #footerDiv>div>div{
 margin-top: 3px;
-
 }
+
+#footerDiv>div>div:hover{ /*footer第二排字的hover樣式*/
+cursor: pointer;
+text-decoration:underline;
+}
+
 
 #footerDiv>div:nth-child(1){
    width:70px;
@@ -384,6 +397,44 @@ margin-top: 3px;
    width:75px;
 }
 
+#square{/*加號的鈕 正方形底*/
+display: inline-block;/*不換行*/
+position: relative;/*微調位置*/
+top:7px;
+left:5px;
+border-radius: 2px;
+border:1px solid #ced0d4;
+width:28px;
+height:18px;
+background-color:#f6f7f9;
+}
+
+#square:hover{/*游標移到上面會變色，與出現手指形狀*/
+    background-color: #e9ebee;
+    cursor: pointer;
+}
+
+#vertical-line{/*加號的鈕 直線*/
+position: relative;
+width:2px;
+height:10px;
+background-color: #69707F;
+top:4px;
+left: 13px;
+}
+
+
+#Horizontal-line{/*加號的鈕 橫線*/
+position: relative;
+width:10px;
+height:2px;
+background-color: #69707F;
+top:-2px;
+left: 9px;
+}
+
+
+
 #facebook2017{
     font-family: sans-serif;
     color:#737373;
@@ -401,9 +452,10 @@ margin-top: 3px;
 <body>
 <!--上方的版-->
 <header>
+   
 <div class="headerFrame">  
 <div class="fbLogo">
-facebook  
+facebook
     </div><!--
 --><div class="fbTopInput">
 <div class="fbTopInputInner" id="EmallOrFoneNumber"><div>電子郵件或電話</div><input type="text"></div><!--
@@ -415,7 +467,7 @@ facebook
 
 <!--中間的版-->
  <main>
-  <div id="mainFrame">
+<div id="mainFrame">
 <div class="mainLeft">
 Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每一刻。
 <img id="mainLeftImg" src="https://www.facebook.com/rsrc.php/v3/yx/r/pyNVUg5EM0j.png" alt="">
@@ -425,19 +477,12 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
     <div class="title">註冊</div>
     <div id="freeForever">永遠免費 <div>!</div></div>
 
-
-
 <div id="mainInputFrame">
 <div id="mainInputLastName"><input type="text" placeholder="姓氏"></div><!--
 --><div id="mainInputFirstName"><input type="text" placeholder="名字"></div>
 </div>
  <div class="mainInput"><input  type="text" placeholder="手機號碼或電子郵件"></div>
 <div class="mainInput"><input type="text" placeholder="設定密碼"></div>
- 
- 
- 
- 
- 
  
  
   <div id="birthday">生日</div>
@@ -451,11 +496,18 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
 　
 </select><select name="月" id="">
        <option value="">月</option>
-<option value="">1</option>
-<option value="">2</option>
-<option value="">3</option>
-<option value="">4</option>
-<option value="">5</option>
+<option value="">1月</option>
+<option value="">2月</option>
+<option value="">3月</option>
+<option value="">4月</option>
+<option value="">5月</option>
+<option value="">6月</option>
+<option value="">7月</option>
+<option value="">8月</option>
+<option value="">9月</option>
+<option value="">10月</option>
+<option value="">11月</option>
+<option value="">12月</option>
 
    </select><select id="day" name="日" id=""> 
     <option value="">日</option>
@@ -469,11 +521,31 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
      <option value="">8</option>
      <option value="">9</option>
      <option value="">10</option>
+    <option value="">11</option>
+     <option value="">12</option>
+     <option value="">13</option>
+     <option value="">14</option>
+     <option value="">15</option>
+      <option value="">16</option>
+     <option value="">17</option>
+     <option value="">18</option>
+     <option value="">19</option>
+     <option value="">20</option>
+   <option value="">21</option>
+     <option value="">22</option>
+     <option value="">23</option>
+     <option value="">24</option>
+     <option value="">25</option>
+      <option value="">26</option>
+     <option value="">27</option>
+     <option value="">28</option>
+     <option value="">29</option>
+     <option value="">30</option>
+    <option value="">31</option>
      </select>
     
      </div>
   <div id="birthdayRight">為什麼需要提供出生日期的<br>資料?</div></div>
-
  <div class="genderRadio "><input  type="radio" name="gender" value="female">女性</div><!--
 --><div class="genderRadio" id="maleRadio"><input  type="radio"  name="gender" value="male" checked>男性</div> 
 <div id='text'>一旦點擊建立帳號，就代表你同意<span>條款</span>，也確認你已閱讀<span>資<br>料政策</span>，包括 <span>Cookie 的使用</span>。你會收到 Facebook 的簡訊通<br>知，而且可以隨時選擇退出。</div>
@@ -500,6 +572,9 @@ Facebook，讓你和親朋好友保持聯繫，隨時分<br>享生活中的每�
 <span>Français (France)</span>
 <span>Deutsch</span>
 <span>Italiano</span>
+ <div id="square">
+<div id="vertical-line"></div><div id="Horizontal-line"></div>
+ </div>
  </div>
  <div id="hr"></div>
 <div id="footerDiv">
